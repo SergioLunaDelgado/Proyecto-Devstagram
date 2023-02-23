@@ -95,3 +95,6 @@ if ($this->app->environment('production')) {
     URL::forceScheme('https');
 }
 ```
+3. Crear los archivos Procfile y htaccess
+4. Exportar la base de datos local
+5. Crear las variables de entorno
