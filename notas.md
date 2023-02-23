@@ -85,3 +85,13 @@
     .blade.php = vista
 * Forma de usarlos en el .blade.php <livewire:vista-ejemplo :variable="$variable">
 * Si se trava usar el comando: `php artisan livewire:publish --assets`
+
+# Produccion
+1. Crear el repositorio de github
+* Si clomanos el lang para los mensajes en español es mejor importarlo manualmente
+2. Modificar el archivo AppServiceProvider.php y agregar el siguiente condicional en la funcion boot:
+```php
+if ($this->app->environment('production')) {
+    URL::forceScheme('https');
+}
+```
